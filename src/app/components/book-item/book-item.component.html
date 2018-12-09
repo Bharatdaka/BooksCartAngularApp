@@ -1,0 +1,15 @@
+<div [class.high]="book.rating>3">
+  <a routerLink="/book-details/{{book.id}}" class="title">{{book.title | titlecase }}</a>
+  <div class="author">{{book.author}}</div>
+  <div>{{book.price | currency:'EUR':true:'2.2-3' }}</div>
+  <div>{{book.rating | number:'1.2-5'}}</div>
+  <div>{{book.sold ? 'SOLD OUT' : 'AVAILABLE'}}</div>
+  <!-- {{today | date:'dd MM yyyy hh:mm:ss'}} -->
+  <button (click)="handleRateUpBtnClick()">&uarr;</button>
+  <button (click)="handleRateDownBtnClick()">&darr;</button>
+  <button (click)="handleMarkBtnClick()">
+    {{ book.sold ? 'Mark as unsold' : 'Mark as sold' }}
+  </button>
+  <button (click)="handleAddCartBtnClick()">+</button>
+  <hr />
+</div>

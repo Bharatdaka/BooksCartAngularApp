@@ -1,0 +1,51 @@
+{
+  "books": [
+    {
+      "id": 1,
+      "title": "The Alchemist",
+      "author": "Paulo Cohelo",
+      "price": 23,
+      "rating": 4,
+      "sold": false
+    },
+    {
+      "id": 2,
+      "title": "Monk who sold his ferrari",
+      "author": "Robin Sharma",
+      "price": 29,
+      "rating": 2
+    },
+    {
+      "id": 3,
+      "title": "5 point someone",
+      "author": "Chetan Bhagat",
+      "price": 18,
+      "rating": 2,
+      "sold": false
+    },
+    {
+      "title": "White Tiger",
+      "author": "Arvind Adiga",
+      "price": 23,
+      "rating": 3,
+      "sold": false,
+      "id": 4
+    },
+    {
+      "title": "Power of now",
+      "author": "Eckhart Tolle",
+      "price": 12,
+      "rating": 5,
+      "sold": false,
+      "id": 5
+    },
+    {
+      "title": "2 states",
+      "author": "Chetan Bhagat",
+      "price": 45,
+      "rating": 3,
+      "sold": false,
+      "id": 6
+    }
+  ]
+}

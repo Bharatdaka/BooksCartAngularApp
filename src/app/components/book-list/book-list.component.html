@@ -1,0 +1,9 @@
+  <book-item 
+    *ngFor="let book of books; let i = index;"
+    [book]="book"
+    (rateUpBtnClick)="rateUp(book)"
+    (rateDownBtnClick)="rateDown(book)"
+    (markSoldBtnClick)="toggleSold(book)"
+    (addCartBtnClick)="addToCart(book)"
+  >
+  </book-item>
