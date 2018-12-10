@@ -14,6 +14,7 @@ import { BookDetailsComponent } from './components/book-details/book-details.com
 import {MatCardModule} from '@angular/material/card';
 import { PopupComponent } from './components/popup/popup.component';
 import { TitlecaseDirective } from './titlecase.directive';
+import { NavbarComponent } from './components/navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { TitlecaseDirective } from './titlecase.directive';
     AboutComponent,
     BookDetailsComponent,
     PopupComponent,
-    TitlecaseDirective
+    TitlecaseDirective,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
