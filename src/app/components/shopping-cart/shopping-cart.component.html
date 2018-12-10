@@ -1,4 +1,4 @@
-<table *ngIf="cart.items.length">
+<table *ngIf="cart.items.length; else templateName">
   <tr>
     <th>Item</th>
     <th>Price</th>
@@ -19,3 +19,6 @@
     </td>
   </tr>
 </table>
+<ng-template #templateName>
+    Nothing in Cart...!!
+</ng-template>

@@ -1,3 +1,10 @@
 .bookscartcolor {
-    background-color:rgb(179, 177, 177);
+    /* background-color:rgb(179, 177, 177); */
+    /* background-color: rgb(63, 92, 153); */
+    /* background-color: rgb(50, 160, 50); */
+    background-color:rgb(72, 119, 72);
+}
+
+.bookscarttext{
+    color:white;
 }
