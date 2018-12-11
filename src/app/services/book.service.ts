@@ -27,18 +27,18 @@ export class BookService {
   rateUp(book: Book) {
     if (book.rating < 5)
       book.rating++;
-    return this.http.put(this.url + '/' + book.id, book);
+    return this.http.put(this.url + '/' + book._id, book);
   }
 
   rateDown(book: Book) {
     if (book.rating > 1)
       book.rating--;
-    return this.http.put(this.url + '/' + book.id, book);
+    return this.http.put(this.url + '/' + book._id, book);
   }
 
   toggleSold(book: Book) {
     book.sold = !book.sold;
-    return this.http.put(this.url + '/' + book.id, book);
+    return this.http.put(this.url + '/' + book._id, book);
   }
 
   addBook(book: Book) {

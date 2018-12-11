@@ -16,11 +16,16 @@ export class BookDetailsComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    let id = this.route.snapshot.paramMap.get('_id');
-    console.log("bharat");
+    // let id = this.route.snapshot.paramMap.get('_id');
+    let id = this.route.snapshot.params.id;
     this.bookService
       .getBook(id)
-      .subscribe(res => this.book = res.json());
+      // .subscribe(res => {let dd = (res.json());
+      //             this.book =  JSON.parse(JSON.stringify(dd))[0];
+      //             console.log(this.book);
+      // });
+      .subscribe(res => {this.book = res.json()[0];
+        console.log(this.book)});
   }
 
 }

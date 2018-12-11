@@ -1,6 +1,14 @@
-<mat-card>
-<div *ngIf="book">
-    <mat-card-title>{{ book.title }}</mat-card-title>
-  <mat-card-content>{{book.author}}</mat-card-content>
+
+<!-- <div
+    *ngFor="let bk of book;">
+  
+    <p>{{ bk.title }}</p>
+    <p>{{ bk.author }}</p>
+
+</div> -->
+
+<div *ngIf="book;">
+  <p>Title: {{ book.title}}</p>
+  <p>Author: {{ book.author}} </p>
+
 </div>
-</mat-card>

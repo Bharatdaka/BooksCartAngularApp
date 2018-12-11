@@ -16,6 +16,7 @@ export class BookItemComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+    // console.log(this.book._id);
   }
 
   handleRateUpBtnClick() {
