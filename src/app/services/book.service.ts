@@ -1,5 +1,5 @@
 import { environment } from './../../environments/environment';
-import { Http, Response } from '@angular/http';
+import { Http, Response, Headers } from '@angular/http';
 import { Book } from './../models/book';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -42,7 +42,11 @@ export class BookService {
   }
 
   addBook(book: Book) {
-    return this.http.post(this.url, book);
+    // const headers = new Headers();
+    // headers.append('Access-Control-Allow-Headers', 'Content-Type');
+    //     headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
+    //     headers.append('Access-Control-Allow-Origin', '*');
+    return this.http.post(this.url, book);//, {headers:headers});
   }
 
 }

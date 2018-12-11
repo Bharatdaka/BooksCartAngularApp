@@ -26,7 +26,7 @@ export class AddBookComponent implements OnInit {
     this.popupService.setMessage('Are you sure?');
     this.bookService
       .addBook(this.newBook)
-      .subscribe(res => this.router.navigate(['/home']));
+      .subscribe(res => this.router.navigate(['/addbook']));
   }
 
 }

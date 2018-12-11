@@ -15,6 +15,9 @@ import {MatCardModule} from '@angular/material/card';
 import { PopupComponent } from './components/popup/popup.component';
 import { TitlecaseDirective } from './titlecase.directive';
 import { NavbarComponent } from './components/navbar/navbar.component';
+import { UserComponent } from './components/user/user.component';
+import { SignupComponent } from './components/user/signup/signup.component';
+import { SigninComponent } from './components/user/signin/signin.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +31,10 @@ import { NavbarComponent } from './components/navbar/navbar.component';
     BookDetailsComponent,
     PopupComponent,
     TitlecaseDirective,
-    NavbarComponent
+    NavbarComponent,
+    UserComponent,
+    SignupComponent,
+    SigninComponent
   ],
   imports: [
     BrowserModule,
