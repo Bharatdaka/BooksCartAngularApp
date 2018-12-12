@@ -1,0 +1,20 @@
+<form #signInForm="ngForm" (ngSubmit)="signInButton();signInForm.reset()">
+    <div class="container">
+      <h1>Login</h1>
+      <hr>
+
+      <label for="email"><b>Email</b></label>
+      <input type="text" placeholder="Enter Email" name="email" [(ngModel)]="user.email" #title="ngModel" required/>
+  
+      <label for="psw"><b>Password</b></label>
+      <input type="password" placeholder="Enter Password" name="psw" [(ngModel)]="user.password" #title="ngModel" required/>
+  
+      <!-- <label>
+        <input type="checkbox" checked="checked" name="remember" style="margin-bottom:15px"> Remember me
+      </label> -->
+  
+      <!-- <div class="clearfix"> -->
+      <button type="submit" class="signinbtn" [disabled]="signInForm.invalid">Login</button>
+      <!-- </div> -->
+    </div>
+  </form>
