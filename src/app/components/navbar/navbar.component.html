@@ -38,13 +38,18 @@
   </div>
 
   <ul class="nav navbar-light justify-content-end">
-    <!-- <li class="nav-item"> -->
-      <a class="nav-link" style="color:white"  routerLink="/user/signin" routerLinkActive="current">Log In</a>
-    <!-- </li> -->
-    <!-- <li class="nav-item"> -->
+      <div *ngIf = "!userService.getUserLoggedIn()">
+      <a class="nav-link" style="color:white"  routerLink="/user/signin" routerLinkActive="current">Login</a>
+      </div>
+
       <a class="nav-link" style="color:white"  routerLink="/user/signup" routerLinkActive="current">Sign Up</a>
+
+      <div *ngIf = "userService.getUserLoggedIn()">
+      <!-- <a class="nav-link" style="color:white"  routerLink="/user/signin" routerLinkActive="current">Logout</a> -->
+      <a class="nav-link" style="color:white"  (click)="logoutButton()" routerLinkActive="current">Logout</a>
+      </div>
     <!-- </li> -->
   </ul>
-
+<user></user>
 </nav>
 <router-outlet></router-outlet>

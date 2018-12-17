@@ -1,3 +1,4 @@
+import { UserdataService } from './../../../services/userdata.service';
 import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 import { User } from './../../../models/userdata';
@@ -13,26 +14,22 @@ export class SignupComponent implements OnInit {
   responceMessage :String;
   showLoginbt = false;
 
-  private url = "http://localhost:3000/signup";
+  
   newUser: User;
-  constructor(private http: Http,
+  constructor(private userService: UserdataService,
+    private http: Http,
     private router: Router) { }
 
   ngOnInit() {
     this.newUser= new User(null, null, null);
   }
 
+
   signUpButton(){
-    
-    console.log(this.url);
     console.log("bhaatat");
-    return this.http.post(this.url, this.newUser).subscribe(
-      // res => this.router.navigate(['/user/signin'])
+    return this.userService.signUp(this.newUser).subscribe(
       data => { this.showLoginbt = true; this.responceMessage = "Signup Success, please Login to continue";},
       error => this.responceMessage = error.json().message
-      // data => console.log("data"),
-      // err => console.log(err)
-
     );
   }
 

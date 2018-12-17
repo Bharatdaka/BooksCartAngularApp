@@ -1,3 +1,4 @@
+import { UserdataService } from './../../services/userdata.service';
 import { PopupService } from './../../services/popup.service';
 import { BookService } from './../../services/book.service';
 import { Book } from './../../models/book';
@@ -15,10 +16,16 @@ export class AddBookComponent implements OnInit {
 
   constructor(private bookService: BookService,
     private router: Router,
-    private popupService: PopupService) { }
+    private popupService: PopupService,
+    private userSerivce: UserdataService ) { }
 
   ngOnInit() {
-    this.newBook = new Book(null, null, null, null);
+    // console.log(this.userSerivce.getUserLoggedIn());
+    if(!this.userSerivce.getUserLoggedIn()){
+      return this.router.navigate(['/user/signin']);
+    } else {
+      this.newBook = new Book(null, null, null, null);
+    }
   }
 
 

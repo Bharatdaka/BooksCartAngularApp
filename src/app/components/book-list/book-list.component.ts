@@ -17,7 +17,7 @@ export class BookListComponent implements OnInit {
   constructor(
     private bookService: BookService,
     private cartService: CartService,
-    private http: Http
+    // private http: Http
   ) {
 
   }

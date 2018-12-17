@@ -1,5 +1,6 @@
 import { environment } from './../../environments/environment';
-import { Http, Response, Headers } from '@angular/http';
+import { Http, Response } from '@angular/http';
+import { HttpHeaders } from '@angular/common/http'
 import { Book } from './../models/book';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
@@ -43,10 +44,14 @@ export class BookService {
 
   addBook(book: Book) {
     // const headers = new Headers();
-    // headers.append('Access-Control-Allow-Headers', 'Content-Type');
+    const httpOptions = new HttpHeaders({
+      'Authorization': localStorage.getItem('token')
+    })
+
+    // headers.append('Authorization',localStorage.getItem('token'));
     //     headers.append('Access-Control-Allow-Methods', 'POST, GET, OPTIONS');
     //     headers.append('Access-Control-Allow-Origin', '*');
-    return this.http.post(this.url, book);//, {headers:headers});
+    return this.http.post(this.url, book, { headers: httpOptions});
   }
 
 }

@@ -15,6 +15,15 @@
   
       <!-- <div class="clearfix"> -->
       <button type="submit" class="signinbtn" [disabled]="signInForm.invalid">Login</button>
-      <!-- </div> -->
     </div>
   </form>
+
+  <div class="container" style="color:red" *ngIf=errorLogin>
+    <br>
+    <hr/>
+      {{ responceMessage }}
+  </div>
+
+<!-- <div>
+  <h2 *ngIf="!userService.getUserLoggedIn()"> You are successfully logged out</h2>
+</div> -->
